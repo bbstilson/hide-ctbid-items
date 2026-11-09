@@ -1,3 +1,7 @@
+> [!WARNING]
+> This is a personal extension slop coded in an hour. Use at your own risk.
+
+
 # Hide CTBid Items
 
 A Firefox extension that lets you hide items you are not interested in on [ctbids.com](https://ctbids.com).
