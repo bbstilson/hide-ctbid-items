@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Hide CTBid Items",
+  "version": "1.0",
+  "description": "Hide items on ctbids.com.",
+  "icons": { "48": "icons/icon-48.png" },
+  "permissions": ["storage"],
+  "action": {
+    "default_icon": { "48": "icons/icon-48.png" },
+    "default_title": "Hidden CTBid items",
+    "default_popup": "popup/popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hide@ctbids.com",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": { "required": ["none"] }
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.ctbids.com/*"],
+      "js": ["common.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

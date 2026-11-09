@@ -1,0 +1,116 @@
+/* Blocks a flash of to-be-hidden cards while storage loads. */
+html.cthide-pending .listitem {
+  visibility: hidden !important;
+}
+
+html.cthide-grid .listitem > .itemcard {
+  position: relative;
+}
+
+/* Buttons are only added in grid mode; hide leftovers after in-app navigation. */
+html:not(.cthide-grid) .cthide-btn {
+  display: none !important;
+}
+
+.cthide-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+}
+
+.cthide-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.cthide-btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #000;
+}
+
+.cthide-btn svg,
+.cthide-banner-close svg {
+  stroke: #fff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  fill: none;
+  pointer-events: none;
+}
+
+/* Override the site's `.itemcard svg { margin-right: 10px }`, which would
+   push the icon off-center. !important because injected sheet order vs the
+   site's sheets is not guaranteed. */
+.itemcard .cthide-btn svg {
+  width: 24px;
+  height: 24px;
+  margin: 0 !important;
+}
+
+#cthide-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2147483647;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #1f2937;
+  color: #fff;
+  font: 15px/1.4 system-ui, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#cthide-banner .cthide-banner-text {
+  flex: 1;
+}
+
+#cthide-banner button {
+  font: inherit;
+  cursor: pointer;
+}
+
+#cthide-banner .cthide-banner-unhide {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+#cthide-banner .cthide-banner-close {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+}
+
+#cthide-banner .cthide-banner-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+#cthide-banner button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
