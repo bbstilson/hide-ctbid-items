@@ -63,4 +63,13 @@ To release an update, raise `version` in `manifest.json` before signing again.
 
 ## Development
 
-There is no build step. Edit the files and click **Reload** next to the extension in `about:debugging`. See `SPEC.md` for the full behavior and the manual test checklist, `PLAN.md` for design decisions, and `CLAUDE.md` for a map of the files.
+There is no build step. Edit the files and click **Reload** next to the extension in `about:debugging`.
+
+Automated tests use [Vitest](https://vitest.dev) with [happy-dom](https://github.com/capricorn86/happy-dom) and need Node 22.12 or later:
+
+```sh
+npm install
+npm test
+```
+
+See `SPEC.md` for the full behavior and the manual test checklist, `PLAN.md` for design decisions, and `CLAUDE.md` for a map of the files.

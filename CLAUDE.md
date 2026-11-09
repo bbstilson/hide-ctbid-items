@@ -19,8 +19,14 @@ Storage: `browser.storage.local`, one key per item, `hidden:<itemId>` → `{ hid
 
 ## Development
 
-No build step, package manager, linter, or tests. Files load into the browser as-is.
+Read `DEVELOPMENT.md` before changing code. It covers the workflow, the test harness (`test/helpers.js`), its gotchas, and what needs a manual check in Firefox.
 
-To run: open `about:debugging#/runtime/this-firefox` in Firefox, click "Load Temporary Add-on", and select `manifest.json`. Click "Reload" there after edits.
+Rules for every change:
+- **Add or update tests** in `test/` for every behavior change or bug fix. Each new test must fail without the change. Confirm this by breaking the code temporarily.
+- **Run `npm test` and make sure all tests pass** before reporting a change as done. Run `npm install` first if `node_modules/` is missing. Never skip, weaken or delete a failing test to get a green run; fix the code, or ask if the test itself is wrong.
+- In tests, read computed styles with `style()` / `isHidden()` from `test/helpers.js`, never `getComputedStyle` directly (happy-dom cache bug).
+- Keep all site selectors and URL regexes in `CTHIDE.SEL` / `CTHIDE.RE` in `common.js`.
+- Update `SPEC.md` and `README.md` when behavior changes.
+- Tests cannot see layout or the live site. Say so when a change needs a manual check in Firefox, and list which `SPEC.md` checklist steps apply.
 
-Verify changes with the manual test checklist at the end of `SPEC.md`.
+To load in Firefox: `about:debugging#/runtime/this-firefox` → "Load Temporary Add-on" → `manifest.json`. Click "Reload" there after edits.

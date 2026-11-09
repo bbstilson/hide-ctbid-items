@@ -176,8 +176,11 @@ function onButtonEvent(e) {
   if (e.type !== "click") return;
   if (e.button !== 0 || e.ctrlKey || e.shiftKey || e.metaKey || e.altKey) return;
   if (currentMode !== "grid") return;
-  const id = btn.dataset.cthideId;
-  if (id && CTHIDE.RE.itemId.test(id)) hideFromCard(btn, id);
+  // Read the ID from the card's current link, not the button's data attribute:
+  // the framework may have pointed a reused card at another item since the last scan.
+  const card = btn.closest(CTHIDE.SEL.card);
+  const id = card && itemIdFromCard(card);
+  if (id) hideFromCard(btn, id);
 }
 
 async function hideFromCard(btn, itemId) {

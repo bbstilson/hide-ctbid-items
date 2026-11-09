@@ -268,7 +268,7 @@ Delete `hide.js`. Update `CLAUDE.md` to match the new files.
 
 ## Manual test checklist
 
-No test framework. Load via `about:debugging#/runtime/this-firefox` → "Load Temporary Add-on" → `manifest.json`.
+Automated tests (`npm test`) cover logic and DOM behavior but not real rendering. Run this checklist in Firefox for that. Load via `about:debugging#/runtime/this-firefox` → "Load Temporary Add-on" → `manifest.json`.
 
 1. Sale grid: every card shows a 48x48 X button in its top-right corner. It does not cover the watchlist or Bid Now buttons.
 2. Click X: the card vanishes, the grid closes the gap, and the page does not navigate.

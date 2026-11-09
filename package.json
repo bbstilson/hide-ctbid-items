@@ -1,0 +1,13 @@
+{
+  "name": "hide-ctbids",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "happy-dom": "^21.0.4",
+    "vitest": "^5.1.0"
+  }
+}

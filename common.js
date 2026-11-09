@@ -3,7 +3,7 @@
 
 const CTHIDE = Object.freeze({
   DAY_MS: 24 * 60 * 60 * 1000,
-  TTL_MS: 10 * 24 * 60 * 60 * 1000, // 864,000,000
+  TTL_MS: 14 * 24 * 60 * 60 * 1000,
   KEY_PREFIX: "hidden:",
   TITLE_MAX: 200,
   PENDING_FAILSAFE_MS: 2000,
