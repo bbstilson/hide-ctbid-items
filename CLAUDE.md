@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Firefox WebExtension (Manifest V3) that hides items on ctbids.com item grids (sale, category and search pages). Each item card gets an X button; hidden items are stored for 10 days and hidden by a generated stylesheet. A toolbar popup lists and unhides them. `SPEC.md` is the spec; `PLAN.md` records design decisions and assumptions.
+Firefox WebExtension (Manifest V3) that hides items on ctbids.com item grids (sale, category and search pages). Each item card gets an X button; hidden items are stored for 14 days and hidden by a generated stylesheet. A toolbar popup lists and unhides them. `SPEC.md` is the spec; `PLAN.md` records design decisions and assumptions.
 
 ## Structure
 

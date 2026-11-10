@@ -12,7 +12,7 @@ A Firefox extension that lets you hide items you are not interested in on [ctbid
   - estate sale pages (`/estate-sale/<id>`)
   - category pages (`/category/Jewelry`, `/category/<group>/<category>`)
   - search results and item lists (`/view-more-items/<term>`, Trending Now, Ending Soon)
-- **Hidden items stay hidden for 10 days.** The hide survives page refreshes and is shared across every page type and every open tab. After 10 days the item comes back on its own.
+- **Hidden items stay hidden for 14 days.** The hide survives page refreshes and is shared across every page type and every open tab. After 14 days the item comes back on its own.
 - **Banner on hidden item pages.** If you open a hidden item directly (for example from a link or your watchlist), a banner at the top tells you it is hidden and lets you unhide it.
 - **Toolbar popup.** Click the extension's toolbar icon to see all hidden items, how many days each has left, and an Unhide button per item. "Clear all" unhides everything (click twice to confirm).
 

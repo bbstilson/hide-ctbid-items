@@ -2,7 +2,7 @@
 
 ## Goal
 
-Firefox desktop extension. On a ctbids.com estate sale item grid, every item card gets a 48x48 button in its top-right corner. Clicking it hides the item. The grid then behaves as if the item never existed. Hidden state persists across refreshes for 10 days, then expires and is cleaned up. A toolbar popup lists hidden items and can unhide them.
+Firefox desktop extension. On a ctbids.com estate sale item grid, every item card gets a 48x48 button in its top-right corner. Clicking it hides the item. The grid then behaves as if the item never existed. Hidden state persists across refreshes for 14 days, then expires and is cleaned up. A toolbar popup lists hidden items and can unhide them.
 
 ## Scope
 
