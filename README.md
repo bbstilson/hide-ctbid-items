@@ -2,9 +2,9 @@
 > This is a personal extension slop coded in an hour. Use at your own risk.
 
 
-# Hide CTBid Items
+# CTBids++
 
-A Firefox extension that lets you hide items you are not interested in on [ctbids.com](https://ctbids.com).
+A Firefox extension for [ctbids.com](https://ctbids.com).
 
 ## What it does
 
@@ -35,18 +35,7 @@ Firefox only runs signed extensions permanently on its release version. Pick the
 
 The extension is active right away. Firefox removes temporary add-ons when it closes, and your hidden items may be lost with it. Repeat these steps after each restart.
 
-### Option 2: Permanent install on Firefox Developer Edition or Nightly
-
-These Firefox versions can run unsigned extensions.
-
-1. Go to `about:config`, search for `xpinstall.signatures.required`, and set it to `false`.
-2. Package the extension from this folder:
-   ```sh
-   zip -r -FS ../hide-ctbids.xpi manifest.json common.js content.js content.css popup icons
-   ```
-3. Go to `about:addons`, click the gear icon, choose **Install Add-on From File…**, and select `hide-ctbids.xpi`.
-
-### Option 3: Permanent install on regular Firefox (signed)
+### Option 2: Permanent install on regular Firefox (signed)
 
 Sign the extension yourself as an unlisted add-on on addons.mozilla.org. It stays private and is not published in the store.
 

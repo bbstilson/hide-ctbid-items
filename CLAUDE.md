@@ -8,7 +8,7 @@ Firefox WebExtension (Manifest V3) that hides items on ctbids.com item grids (sa
 
 ## Structure
 
-- `manifest.json` — MV3 manifest. Registers `common.js`, `content.js` and `content.css` as content scripts on `*://*.ctbids.com/*` at `document_start`. `browser_specific_settings.gecko` sets the add-on ID (`hide@ctbids.com`), `strict_min_version` 140.0, and declares no data collection.
+- `manifest.json` — MV3 manifest. Registers `common.js`, `content.js` and `content.css` as content scripts on `*://*.ctbids.com/*` at `document_start`. `browser_specific_settings.gecko` sets the add-on ID (`ctbidsplusplus@ctbids.com`), `strict_min_version` 140.0, and declares no data collection.
 - `common.js` — shared `CTHIDE` object: TTL, storage key prefix, all site selectors and path regexes, entry parse/expiry helpers. Loaded by the content script and the popup. Site markup changes are fixed here.
 - `content.js` — page mode detection (grid/detail/none), TTL prune, generated `<style id="cthide-rules">`, hide buttons, live sync via `storage.onChanged`, detail-page banner.
 - `content.css` — pending (anti-flash) rule, button and banner styles.

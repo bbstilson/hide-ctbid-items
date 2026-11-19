@@ -1,18 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "Hide CTBid Items",
+  "name": "CTBidsplusplus",
   "version": "1.0",
-  "description": "Hide items on ctbids.com.",
+  "description": "Additional functionality for ctbids.com.",
   "icons": { "48": "icons/icon-48.png" },
   "permissions": ["storage"],
   "action": {
     "default_icon": { "48": "icons/icon-48.png" },
-    "default_title": "Hidden CTBid items",
+    "default_title": "CTBids++",
     "default_popup": "popup/popup.html"
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "hide@ctbids.com",
+      "id": "ctbidsplusplus@ctbids.com",
       "strict_min_version": "140.0",
       "data_collection_permissions": { "required": ["none"] }
     }
